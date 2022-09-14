@@ -33,16 +33,16 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.manageProductspnl = new System.Windows.Forms.Panel();
             this.sellerbtn = new System.Windows.Forms.Button();
-            this.categorybtn = new System.Windows.Forms.Button();
+            this.categoriesbtn = new System.Windows.Forms.Button();
             this.sellingbtn = new System.Windows.Forms.Button();
             this.x_exitbtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.idlbl = new System.Windows.Forms.Label();
-            this.idtxt = new System.Windows.Forms.TextBox();
+            this.prodidtxt = new System.Windows.Forms.TextBox();
             this.nametxt = new System.Windows.Forms.TextBox();
             this.namelbl = new System.Windows.Forms.Label();
             this.quanititytxt = new System.Windows.Forms.TextBox();
-            this.quantirylbl = new System.Windows.Forms.Label();
+            this.quantitylbl = new System.Windows.Forms.Label();
             this.pricetxt = new System.Windows.Forms.TextBox();
             this.pricelbl = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -71,10 +71,10 @@
             this.manageProductspnl.Controls.Add(this.pricetxt);
             this.manageProductspnl.Controls.Add(this.pricelbl);
             this.manageProductspnl.Controls.Add(this.quanititytxt);
-            this.manageProductspnl.Controls.Add(this.quantirylbl);
+            this.manageProductspnl.Controls.Add(this.quantitylbl);
             this.manageProductspnl.Controls.Add(this.nametxt);
             this.manageProductspnl.Controls.Add(this.namelbl);
-            this.manageProductspnl.Controls.Add(this.idtxt);
+            this.manageProductspnl.Controls.Add(this.prodidtxt);
             this.manageProductspnl.Controls.Add(this.idlbl);
             this.manageProductspnl.Controls.Add(this.label1);
             this.manageProductspnl.Location = new System.Drawing.Point(127, 31);
@@ -95,18 +95,18 @@
             this.sellerbtn.Text = "Sellers";
             this.sellerbtn.UseVisualStyleBackColor = true;
             // 
-            // categorybtn
+            // categoriesbtn
             // 
-            this.categorybtn.FlatAppearance.BorderSize = 0;
-            this.categorybtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.categorybtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.categorybtn.ForeColor = System.Drawing.Color.DarkOrange;
-            this.categorybtn.Location = new System.Drawing.Point(5, 119);
-            this.categorybtn.Name = "categorybtn";
-            this.categorybtn.Size = new System.Drawing.Size(116, 36);
-            this.categorybtn.TabIndex = 2;
-            this.categorybtn.Text = "Category";
-            this.categorybtn.UseVisualStyleBackColor = true;
+            this.categoriesbtn.FlatAppearance.BorderSize = 0;
+            this.categoriesbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.categoriesbtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.categoriesbtn.ForeColor = System.Drawing.Color.DarkOrange;
+            this.categoriesbtn.Location = new System.Drawing.Point(5, 119);
+            this.categoriesbtn.Name = "categoriesbtn";
+            this.categoriesbtn.Size = new System.Drawing.Size(116, 36);
+            this.categoriesbtn.TabIndex = 2;
+            this.categoriesbtn.Text = "Categories";
+            this.categoriesbtn.UseVisualStyleBackColor = true;
             // 
             // sellingbtn
             // 
@@ -157,12 +157,12 @@
             this.idlbl.TabIndex = 1;
             this.idlbl.Text = "ID";
             // 
-            // idtxt
+            // prodidtxt
             // 
-            this.idtxt.Location = new System.Drawing.Point(107, 88);
-            this.idtxt.Name = "idtxt";
-            this.idtxt.Size = new System.Drawing.Size(159, 20);
-            this.idtxt.TabIndex = 2;
+            this.prodidtxt.Location = new System.Drawing.Point(107, 88);
+            this.prodidtxt.Name = "prodidtxt";
+            this.prodidtxt.Size = new System.Drawing.Size(159, 20);
+            this.prodidtxt.TabIndex = 2;
             // 
             // nametxt
             // 
@@ -189,16 +189,16 @@
             this.quanititytxt.Size = new System.Drawing.Size(159, 20);
             this.quanititytxt.TabIndex = 6;
             // 
-            // quantirylbl
+            // quantitylbl
             // 
-            this.quantirylbl.AutoSize = true;
-            this.quantirylbl.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quantirylbl.ForeColor = System.Drawing.Color.White;
-            this.quantirylbl.Location = new System.Drawing.Point(17, 152);
-            this.quantirylbl.Name = "quantirylbl";
-            this.quantirylbl.Size = new System.Drawing.Size(84, 19);
-            this.quantirylbl.TabIndex = 5;
-            this.quantirylbl.Text = "QUANTITY";
+            this.quantitylbl.AutoSize = true;
+            this.quantitylbl.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quantitylbl.ForeColor = System.Drawing.Color.White;
+            this.quantitylbl.Location = new System.Drawing.Point(17, 152);
+            this.quantitylbl.Name = "quantitylbl";
+            this.quantitylbl.Size = new System.Drawing.Size(84, 19);
+            this.quantitylbl.TabIndex = 5;
+            this.quantitylbl.Text = "QUANTITY";
             // 
             // pricetxt
             // 
@@ -356,10 +356,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(909, 526);
+            this.ClientSize = new System.Drawing.Size(994, 611);
             this.Controls.Add(this.x_exitbtn);
             this.Controls.Add(this.sellingbtn);
-            this.Controls.Add(this.categorybtn);
+            this.Controls.Add(this.categoriesbtn);
             this.Controls.Add(this.sellerbtn);
             this.Controls.Add(this.manageProductspnl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -377,7 +377,7 @@
 
         private System.Windows.Forms.Panel manageProductspnl;
         private System.Windows.Forms.Button sellerbtn;
-        private System.Windows.Forms.Button categorybtn;
+        private System.Windows.Forms.Button categoriesbtn;
         private System.Windows.Forms.Button sellingbtn;
         private System.Windows.Forms.Button x_exitbtn;
         private System.Windows.Forms.Button refreshbtn;
@@ -391,10 +391,10 @@
         private System.Windows.Forms.TextBox pricetxt;
         private System.Windows.Forms.Label pricelbl;
         private System.Windows.Forms.TextBox quanititytxt;
-        private System.Windows.Forms.Label quantirylbl;
+        private System.Windows.Forms.Label quantitylbl;
         private System.Windows.Forms.TextBox nametxt;
         private System.Windows.Forms.Label namelbl;
-        private System.Windows.Forms.TextBox idtxt;
+        private System.Windows.Forms.TextBox prodidtxt;
         private System.Windows.Forms.Label idlbl;
         private System.Windows.Forms.Label label1;
     }
