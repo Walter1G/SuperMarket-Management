@@ -218,6 +218,7 @@
             this.Controls.Add(this.loginlbl);
             this.Controls.Add(this.guna2GradientCircleButton1);
             this.Name = "loginfrm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.ResumeLayout(false);
             this.PerformLayout();
