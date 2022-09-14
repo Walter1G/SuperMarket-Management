@@ -65,7 +65,7 @@
             this.loginlbl.AutoSize = true;
             this.loginlbl.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginlbl.ForeColor = System.Drawing.Color.DarkOrange;
-            this.loginlbl.Location = new System.Drawing.Point(214, 1);
+            this.loginlbl.Location = new System.Drawing.Point(111, 9);
             this.loginlbl.Name = "loginlbl";
             this.loginlbl.Size = new System.Drawing.Size(79, 25);
             this.loginlbl.TabIndex = 3;
@@ -217,6 +217,7 @@
             this.Controls.Add(this.userNamelbl);
             this.Controls.Add(this.loginlbl);
             this.Controls.Add(this.guna2GradientCircleButton1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "loginfrm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
