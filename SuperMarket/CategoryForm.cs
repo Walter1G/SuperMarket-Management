@@ -24,7 +24,11 @@ namespace SuperMarket
             try
             {
                 con.Open();
-                string query = "insert into Categorytbl values(")";
+                string query = "insert into Categorytbl values("+catidtxt.Text+",'"+catnametxt.Text+"','"+catdescriptiontxt.Text+"')";
+                SqlCommand cmd=new SqlCommand(query,con);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Category Added Successfully");
+                con.Close();
             }
             catch(Exception ex)
             {
