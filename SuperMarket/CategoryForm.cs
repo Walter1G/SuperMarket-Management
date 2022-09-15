@@ -35,5 +35,29 @@ namespace SuperMarket
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void populate()
+        {
+            con.Open();
+            string query = "select * from Categorytbl";
+            SqlDataAdapter sda = new SqlDataAdapter(query,con);
+            SqlCommandBuilder builder = new SqlCommandBuilder(sda);
+            var ds = new DataSet();
+            sda.Fill(ds);
+            CatDGV.DataSource = ds.Tables[0];
+            con.Close();
+        }
+
+        private void CategoryForm_Load(object sender, EventArgs e)
+        {
+            populate();
+        }
+
+        private void CatDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            catidtxt.Text = CatDGV.SelectedRows[0].Cells[0].Value.ToString();
+            catnametxt.Text = CatDGV.SelectedRows[0].Cells[1].Value.ToString();
+            catdescriptiontxt.Text = CatDGV.SelectedRows[0].Cells[2].Value.ToString();
+        }
     }
 }
