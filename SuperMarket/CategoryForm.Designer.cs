@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.manageCategoriespnl = new System.Windows.Forms.Panel();
             this.CatDGV = new Guna.UI2.WinForms.Guna2DataGridView();
             this.deletebtn = new System.Windows.Forms.Button();
@@ -46,6 +46,7 @@
             this.sellingbtn = new System.Windows.Forms.Button();
             this.productsbtn = new System.Windows.Forms.Button();
             this.sellerbtn = new System.Windows.Forms.Button();
+            this.x_exitbtn = new System.Windows.Forms.Button();
             this.manageCategoriespnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CatDGV)).BeginInit();
             this.SuspendLayout();
@@ -71,26 +72,26 @@
             // 
             // CatDGV
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.CatDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.CatDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            this.CatDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.CatDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.CatDGV.ColumnHeadersHeight = 30;
             this.CatDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.CatDGV.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.CatDGV.DefaultCellStyle = dataGridViewCellStyle12;
             this.CatDGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.CatDGV.Location = new System.Drawing.Point(289, 70);
             this.CatDGV.Name = "CatDGV";
@@ -148,6 +149,7 @@
             this.editbtn.TabIndex = 11;
             this.editbtn.Text = "EDIT";
             this.editbtn.UseVisualStyleBackColor = false;
+            this.editbtn.Click += new System.EventHandler(this.editbtn_Click);
             // 
             // addbtn
             // 
@@ -268,11 +270,26 @@
             this.sellerbtn.Text = "Sellers";
             this.sellerbtn.UseVisualStyleBackColor = true;
             // 
+            // x_exitbtn
+            // 
+            this.x_exitbtn.FlatAppearance.BorderSize = 0;
+            this.x_exitbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.x_exitbtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.x_exitbtn.ForeColor = System.Drawing.Color.DarkOrange;
+            this.x_exitbtn.Location = new System.Drawing.Point(924, 18);
+            this.x_exitbtn.Name = "x_exitbtn";
+            this.x_exitbtn.Size = new System.Drawing.Size(35, 27);
+            this.x_exitbtn.TabIndex = 17;
+            this.x_exitbtn.Text = "X";
+            this.x_exitbtn.UseVisualStyleBackColor = true;
+            this.x_exitbtn.Click += new System.EventHandler(this.x_exitbtn_Click);
+            // 
             // CategoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(994, 611);
+            this.Controls.Add(this.x_exitbtn);
             this.Controls.Add(this.sellingbtn);
             this.Controls.Add(this.manageCategoriespnl);
             this.Controls.Add(this.productsbtn);
@@ -306,5 +323,6 @@
         private System.Windows.Forms.Button sellingbtn;
         private System.Windows.Forms.Button productsbtn;
         private System.Windows.Forms.Button sellerbtn;
+        private System.Windows.Forms.Button x_exitbtn;
     }
 }

@@ -88,5 +88,38 @@ namespace SuperMarket
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void editbtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (catidtxt.Text == "" || catnametxt.Text=="" || catdescriptiontxt.Text=="")
+                {
+                    MessageBox.Show("Missing Information");
+                }
+                else
+                {
+
+                    con.Open();
+                    string query = "update Categorytbl set CatName='" + catnametxt.Text + "', CatDesc='" + catdescriptiontxt.Text + "' where Catid=" + catidtxt.Text + "";
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Category Successfully updated");
+
+                    con.Close();
+                    populate();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void x_exitbtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
