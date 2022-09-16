@@ -94,5 +94,17 @@ namespace SuperMarket
             pricetxt.Text = ProdDGV.SelectedRows[0].Cells[3].Value.ToString();
             categorycombo.SelectedValue = ProdDGV.SelectedRows[0].Cells[4].Value.ToString();
         }
+
+        private void sellerbtn_Click(object sender, EventArgs e)
+        {
+            SellerForm seller = new SellerForm();
+            seller.Show();
+            Hide();
+        }
+
+        private void editbtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
