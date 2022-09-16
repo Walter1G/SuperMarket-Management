@@ -16,5 +16,24 @@ namespace SuperMarket
         {
             InitializeComponent();
         }
+
+        private void categoriesbtn_Click(object sender, EventArgs e)
+        {
+            CategoryForm category = new CategoryForm();
+            Hide();
+            category.Show();
+        }
+
+        private void x_exitbtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void productsbtn_Click(object sender, EventArgs e)
+        {
+            ProductForm product = new ProductForm();
+            product.Show();
+            Hide();
+        }
     }
 }

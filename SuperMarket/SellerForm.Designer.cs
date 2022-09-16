@@ -28,14 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.manageProductspnl = new System.Windows.Forms.Panel();
+            this.passwordtxt = new System.Windows.Forms.TextBox();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.deletebtn = new System.Windows.Forms.Button();
             this.editbtn = new System.Windows.Forms.Button();
             this.addbtn = new System.Windows.Forms.Button();
+            this.passwordlbl = new System.Windows.Forms.Label();
             this.pricetxt = new System.Windows.Forms.TextBox();
             this.pricelbl = new System.Windows.Forms.Label();
             this.quanititytxt = new System.Windows.Forms.TextBox();
@@ -49,8 +51,6 @@
             this.sellingbtn = new System.Windows.Forms.Button();
             this.categoriesbtn = new System.Windows.Forms.Button();
             this.productsbtn = new System.Windows.Forms.Button();
-            this.passwordlbl = new System.Windows.Forms.Label();
-            this.passwordtxt = new System.Windows.Forms.TextBox();
             this.manageProductspnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -78,28 +78,35 @@
             this.manageProductspnl.Size = new System.Drawing.Size(780, 483);
             this.manageProductspnl.TabIndex = 1;
             // 
+            // passwordtxt
+            // 
+            this.passwordtxt.Location = new System.Drawing.Point(107, 228);
+            this.passwordtxt.Name = "passwordtxt";
+            this.passwordtxt.Size = new System.Drawing.Size(159, 20);
+            this.passwordtxt.TabIndex = 14;
+            // 
             // guna2DataGridView1
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.guna2DataGridView1.ColumnHeadersHeight = 4;
             this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle9;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.Location = new System.Drawing.Point(283, 70);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
@@ -169,6 +176,17 @@
             this.addbtn.TabIndex = 5;
             this.addbtn.Text = "ADD";
             this.addbtn.UseVisualStyleBackColor = false;
+            // 
+            // passwordlbl
+            // 
+            this.passwordlbl.AutoSize = true;
+            this.passwordlbl.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordlbl.ForeColor = System.Drawing.Color.White;
+            this.passwordlbl.Location = new System.Drawing.Point(8, 226);
+            this.passwordlbl.Name = "passwordlbl";
+            this.passwordlbl.Size = new System.Drawing.Size(93, 19);
+            this.passwordlbl.TabIndex = 9;
+            this.passwordlbl.Text = "PASSWORD";
             // 
             // pricetxt
             // 
@@ -265,6 +283,7 @@
             this.x_exitbtn.TabIndex = 5;
             this.x_exitbtn.Text = "X";
             this.x_exitbtn.UseVisualStyleBackColor = true;
+            this.x_exitbtn.Click += new System.EventHandler(this.x_exitbtn_Click);
             // 
             // sellingbtn
             // 
@@ -287,10 +306,11 @@
             this.categoriesbtn.ForeColor = System.Drawing.Color.DarkOrange;
             this.categoriesbtn.Location = new System.Drawing.Point(4, 163);
             this.categoriesbtn.Name = "categoriesbtn";
-            this.categoriesbtn.Size = new System.Drawing.Size(116, 36);
+            this.categoriesbtn.Size = new System.Drawing.Size(133, 36);
             this.categoriesbtn.TabIndex = 7;
             this.categoriesbtn.Text = "Categories";
             this.categoriesbtn.UseVisualStyleBackColor = true;
+            this.categoriesbtn.Click += new System.EventHandler(this.categoriesbtn_Click);
             // 
             // productsbtn
             // 
@@ -304,24 +324,7 @@
             this.productsbtn.TabIndex = 6;
             this.productsbtn.Text = "Products";
             this.productsbtn.UseVisualStyleBackColor = true;
-            // 
-            // passwordlbl
-            // 
-            this.passwordlbl.AutoSize = true;
-            this.passwordlbl.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordlbl.ForeColor = System.Drawing.Color.White;
-            this.passwordlbl.Location = new System.Drawing.Point(8, 226);
-            this.passwordlbl.Name = "passwordlbl";
-            this.passwordlbl.Size = new System.Drawing.Size(93, 19);
-            this.passwordlbl.TabIndex = 9;
-            this.passwordlbl.Text = "PASSWORD";
-            // 
-            // passwordtxt
-            // 
-            this.passwordtxt.Location = new System.Drawing.Point(107, 228);
-            this.passwordtxt.Name = "passwordtxt";
-            this.passwordtxt.Size = new System.Drawing.Size(159, 20);
-            this.passwordtxt.TabIndex = 14;
+            this.productsbtn.Click += new System.EventHandler(this.productsbtn_Click);
             // 
             // SellerForm
             // 

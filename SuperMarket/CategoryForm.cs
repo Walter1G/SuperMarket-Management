@@ -121,5 +121,19 @@ namespace SuperMarket
         {
             Application.Exit();
         }
+
+        private void productsbtn_Click(object sender, EventArgs e)
+        {
+            ProductForm products =new ProductForm();
+            products.Show();
+            Hide();
+        }
+
+        private void sellerbtn_Click(object sender, EventArgs e)
+        {
+            SellerForm seller = new SellerForm();
+            seller.Show();
+            Hide();
+        }
     }
 }
