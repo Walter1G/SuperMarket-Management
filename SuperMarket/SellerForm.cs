@@ -67,13 +67,9 @@ namespace SuperMarket
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Seller Added Successfully");
-                con.Close();
-                idtxt.Clear();
-                nametxt.Clear();
-                agetxt.Clear();
-                phonetxt.Clear();
-                passwordtxt.Clear();
+                con.Close();               
                 populate();
+                clearFields();
             }
             catch (Exception ex)
             {
@@ -99,13 +95,15 @@ namespace SuperMarket
                 {
 
                     con.Open();
-                    string query = "update SellerTbl set SellerName='" + nametxt.Text + "', SellerAge='" + agetxt.Text + "', SellerPhone='"+phonetxt.Text+"', SellerPass='"+passwordtxt+"' where SellerId=" + idtxt.Text + "";
+                    string query = "update SellerTbl set SellerName='" + nametxt.Text + "', SellerAge='" + agetxt.Text + "', SellerPhone='"+phonetxt.Text+"', SellerPass='"+passwordtxt+"' where SellerId='" + idtxt.Text + "';";
                     SqlCommand cmd = new SqlCommand(query, con);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Seller Successfully updated");
 
-                    con.Close();
+                    con.Close();                    
                     populate();
+                    clearFields();
+
                 }
 
             }
@@ -115,6 +113,15 @@ namespace SuperMarket
             }
         }
 
+        private void clearFields()
+        {
+            idtxt.Text = "";
+            nametxt.Text = "";
+            agetxt.Text = "";
+            phonetxt.Text = "";
+            passwordtxt.Text = "";
+
+        }
         private void deletebtn_Click(object sender, EventArgs e)
         {
             try
@@ -130,9 +137,10 @@ namespace SuperMarket
                     SqlCommand cmd = new SqlCommand(query, con);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Seller Deleted successfully");
+                    populate();
                     con.Close();
 
-                    populate();
+                    
                 }
 
             }

@@ -101,7 +101,7 @@ namespace SuperMarket
                 {
 
                     con.Open();
-                    string query = "update Categorytbl set CatName='" + catnametxt.Text + "', CatDesc='" + catdescriptiontxt.Text + "' where Catid=" + catidtxt.Text + "";
+                    string query = "update Categorytbl set CatName='" + catnametxt.Text + "', CatDesc='" + catdescriptiontxt.Text + "' where Catid=" + catidtxt.Text +";";
                     SqlCommand cmd = new SqlCommand(query, con);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Category Successfully updated");
