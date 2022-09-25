@@ -51,6 +51,10 @@ namespace SuperMarket
                             MessageBox.Show("If you are the Admin, Enter the correct credentials");
                         }
                     }
+                    else
+                    {
+                        MessageBox.Show("You are in the Seller Section");
+                    }
                 }
                 else
                 {
