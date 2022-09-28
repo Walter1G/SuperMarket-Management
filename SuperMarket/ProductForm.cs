@@ -65,6 +65,7 @@ namespace SuperMarket
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Product Added Successfully");
                     con.Close();
+                clearFields();
                     populate();
                 }
                 catch (Exception ex)
@@ -104,6 +105,15 @@ namespace SuperMarket
 
         private void editbtn_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void clearFields()
+        {
+            prodidtxt.Text = "";
+           nametxt.Text = "";
+            quanititytxt.Text = "";
+            pricetxt.Text = "";
 
         }
     }
