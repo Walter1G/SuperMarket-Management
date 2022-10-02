@@ -34,9 +34,22 @@ namespace SuperMarket
             prodDVG1.DataSource = ds.Tables[0];
             con.Close();
         }
+
+        private void populateBills()
+        {
+            con.Open();
+            string query = "select BillId,SellerName,BillDate,TotalAmt from BillTbl";
+            SqlDataAdapter sda = new SqlDataAdapter(query, con);
+            SqlCommandBuilder builder = new SqlCommandBuilder(sda);
+            var bills = new DataSet();
+            sda.Fill(bills);
+            billDGV.DataSource = bills.Tables[0];
+            con.Close();
+        }
         private void SellingForm_Load(object sender, EventArgs e)
         {
             populate();
+            populateBills();
         }
 
         private void prodDVG1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -78,12 +91,82 @@ namespace SuperMarket
 
                 orderDVG.Rows.Add(newrow);
                 grandTotal = grandTotal + total;
-
-                billamountlbl.Text = $"KES/- {grandTotal}";
+                billamountlbl1.Text = "KES/- ";
+                billamountlbl.Text =""+ grandTotal;
                 n++;
             }
 
             
+
+        }
+
+        private void addBillbtn_Click(object sender, EventArgs e)
+        {
+            if (billidtxt.Text == "")
+            {
+                MessageBox.Show("Missing Bill ID");
+            }
+            else
+            {
+                try
+                {
+                    
+                    con.Open();
+                    string query = "insert into BillTbl values('" +billidtxt.Text+ "','" +sellerlbl.Text+ "','" +datelbl.Text+ "','" + grandTotal+ "')";
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Order Added Successfully");
+                    con.Close();
+
+                    populateBills();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        int flag = 0;
+        private void printbtn_Click(object sender, EventArgs e)
+        {
+            if(printPreviewDialog1.ShowDialog() == DialogResult.OK)
+            {
+                printDocument1.Print();
+            }
+        }
+
+        private void billDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            flag = 1;
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            e.Graphics.DrawString("Family SuperMarket", new Font("Century Gothic", 25, FontStyle.Bold),Brushes.Red, new Point(230));
+            e.Graphics.DrawString("Walter1G", new Font("Century Gothic", 20, FontStyle.Italic),Brushes.Red, new Point(300,230));
+            e.Graphics.DrawString("Bill ID: "+billDGV.SelectedRows[0].Cells[0].Value.ToString(), new Font("Century Gothic", 20, FontStyle.Bold),Brushes.Blue, new Point(70,70));
+            e.Graphics.DrawString("Seller Name: "+billDGV.SelectedRows[0].Cells[1].Value.ToString(), new Font("Century Gothic", 20, FontStyle.Bold),Brushes.Blue, new Point(70,100));
+            e.Graphics.DrawString("Date: "+billDGV.SelectedRows[0].Cells[2].Value.ToString(), new Font("Century Gothic", 20, FontStyle.Bold),Brushes.Blue, new Point(70,130));
+            e.Graphics.DrawString("Total Amount: "+billDGV.SelectedRows[0].Cells[3].Value.ToString(), new Font("Century Gothic", 20, FontStyle.Bold),Brushes.Blue, new Point(70,160));
+
+        }
+
+        private void refressProductsbtn_Click(object sender, EventArgs e)
+        {
+            populate();
+        }
+
+        private void categorycombo_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            con.Open();
+            string query = "select ProdName,ProdQty from ProductTbl where ProdCat='"+categorycombo.SelectedItem.ToString()+"'";
+            SqlDataAdapter sda = new SqlDataAdapter(query, con);
+            SqlCommandBuilder cmd = new SqlCommandBuilder(sda);
+            var ds = new DataSet();
+            sda.Fill(ds);
+            prodDVG1.DataSource = ds.Tables[0];
+            con.Close();
 
         }
     }

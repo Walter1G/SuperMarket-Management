@@ -37,7 +37,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SellingForm));
             this.manageProductspnl = new System.Windows.Forms.Panel();
+            this.billamountlbl = new System.Windows.Forms.Label();
             this.saleslistlbl = new System.Windows.Forms.Label();
             this.orderDVG = new Guna.UI2.WinForms.Guna2DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,19 +47,19 @@
             this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantiy = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.billamountlbl = new System.Windows.Forms.Label();
+            this.billamountlbl1 = new System.Windows.Forms.Label();
             this.amountlbl = new System.Windows.Forms.Label();
             this.addProductbtn = new System.Windows.Forms.Button();
             this.sellerlbl = new System.Windows.Forms.Label();
             this.datelbl = new System.Windows.Forms.Label();
             this.deletebtn = new System.Windows.Forms.Button();
             this.printbtn = new System.Windows.Forms.Button();
-            this.addbtn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.addBillbtn = new System.Windows.Forms.Button();
+            this.refressProductsbtn = new System.Windows.Forms.Button();
             this.prodDVG1 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.refreshbtn = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.ProdDGV = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.billDGV = new Guna.UI2.WinForms.Guna2DataGridView();
             this.categorycombo = new System.Windows.Forms.ComboBox();
             this.quantitytxt = new System.Windows.Forms.TextBox();
             this.pricelbl = new System.Windows.Forms.Label();
@@ -65,34 +67,37 @@
             this.quantitylbl = new System.Windows.Forms.Label();
             this.nametxt = new System.Windows.Forms.TextBox();
             this.namelbl = new System.Windows.Forms.Label();
-            this.prodidtxt = new System.Windows.Forms.TextBox();
+            this.billidtxt = new System.Windows.Forms.TextBox();
             this.idlbl = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.x_exitbtn = new System.Windows.Forms.Button();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.manageProductspnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.orderDVG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prodDVG1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ProdDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.billDGV)).BeginInit();
             this.SuspendLayout();
             // 
             // manageProductspnl
             // 
             this.manageProductspnl.BackColor = System.Drawing.Color.DarkOrange;
+            this.manageProductspnl.Controls.Add(this.billamountlbl);
             this.manageProductspnl.Controls.Add(this.saleslistlbl);
             this.manageProductspnl.Controls.Add(this.orderDVG);
-            this.manageProductspnl.Controls.Add(this.billamountlbl);
+            this.manageProductspnl.Controls.Add(this.billamountlbl1);
             this.manageProductspnl.Controls.Add(this.amountlbl);
             this.manageProductspnl.Controls.Add(this.addProductbtn);
             this.manageProductspnl.Controls.Add(this.sellerlbl);
             this.manageProductspnl.Controls.Add(this.datelbl);
             this.manageProductspnl.Controls.Add(this.deletebtn);
             this.manageProductspnl.Controls.Add(this.printbtn);
-            this.manageProductspnl.Controls.Add(this.addbtn);
-            this.manageProductspnl.Controls.Add(this.button1);
+            this.manageProductspnl.Controls.Add(this.addBillbtn);
+            this.manageProductspnl.Controls.Add(this.refressProductsbtn);
             this.manageProductspnl.Controls.Add(this.prodDVG1);
             this.manageProductspnl.Controls.Add(this.refreshbtn);
             this.manageProductspnl.Controls.Add(this.comboBox1);
-            this.manageProductspnl.Controls.Add(this.ProdDGV);
+            this.manageProductspnl.Controls.Add(this.billDGV);
             this.manageProductspnl.Controls.Add(this.categorycombo);
             this.manageProductspnl.Controls.Add(this.quantitytxt);
             this.manageProductspnl.Controls.Add(this.pricelbl);
@@ -100,7 +105,7 @@
             this.manageProductspnl.Controls.Add(this.quantitylbl);
             this.manageProductspnl.Controls.Add(this.nametxt);
             this.manageProductspnl.Controls.Add(this.namelbl);
-            this.manageProductspnl.Controls.Add(this.prodidtxt);
+            this.manageProductspnl.Controls.Add(this.billidtxt);
             this.manageProductspnl.Controls.Add(this.idlbl);
             this.manageProductspnl.Controls.Add(this.label1);
             this.manageProductspnl.Location = new System.Drawing.Point(57, 28);
@@ -108,6 +113,16 @@
             this.manageProductspnl.Size = new System.Drawing.Size(905, 601);
             this.manageProductspnl.TabIndex = 1;
             this.manageProductspnl.Paint += new System.Windows.Forms.PaintEventHandler(this.manageProductspnl_Paint);
+            // 
+            // billamountlbl
+            // 
+            this.billamountlbl.AutoSize = true;
+            this.billamountlbl.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.billamountlbl.ForeColor = System.Drawing.Color.White;
+            this.billamountlbl.Location = new System.Drawing.Point(605, 275);
+            this.billamountlbl.Name = "billamountlbl";
+            this.billamountlbl.Size = new System.Drawing.Size(0, 28);
+            this.billamountlbl.TabIndex = 28;
             // 
             // saleslistlbl
             // 
@@ -202,16 +217,16 @@
             this.total.HeaderText = "Total";
             this.total.Name = "total";
             // 
-            // billamountlbl
+            // billamountlbl1
             // 
-            this.billamountlbl.AutoSize = true;
-            this.billamountlbl.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.billamountlbl.ForeColor = System.Drawing.Color.White;
-            this.billamountlbl.Location = new System.Drawing.Point(534, 275);
-            this.billamountlbl.Name = "billamountlbl";
-            this.billamountlbl.Size = new System.Drawing.Size(32, 28);
-            this.billamountlbl.TabIndex = 25;
-            this.billamountlbl.Text = "--";
+            this.billamountlbl1.AutoSize = true;
+            this.billamountlbl1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.billamountlbl1.ForeColor = System.Drawing.Color.White;
+            this.billamountlbl1.Location = new System.Drawing.Point(534, 275);
+            this.billamountlbl1.Name = "billamountlbl1";
+            this.billamountlbl1.Size = new System.Drawing.Size(32, 28);
+            this.billamountlbl1.TabIndex = 25;
+            this.billamountlbl1.Text = "--";
             // 
             // amountlbl
             // 
@@ -289,34 +304,37 @@
             this.printbtn.TabIndex = 19;
             this.printbtn.Text = "PRINT";
             this.printbtn.UseVisualStyleBackColor = false;
+            this.printbtn.Click += new System.EventHandler(this.printbtn_Click);
             // 
-            // addbtn
+            // addBillbtn
             // 
-            this.addbtn.BackColor = System.Drawing.Color.White;
-            this.addbtn.FlatAppearance.BorderSize = 0;
-            this.addbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addbtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addbtn.ForeColor = System.Drawing.Color.DarkOrange;
-            this.addbtn.Location = new System.Drawing.Point(396, 535);
-            this.addbtn.Name = "addbtn";
-            this.addbtn.Size = new System.Drawing.Size(77, 36);
-            this.addbtn.TabIndex = 18;
-            this.addbtn.Text = "ADD";
-            this.addbtn.UseVisualStyleBackColor = false;
+            this.addBillbtn.BackColor = System.Drawing.Color.White;
+            this.addBillbtn.FlatAppearance.BorderSize = 0;
+            this.addBillbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addBillbtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addBillbtn.ForeColor = System.Drawing.Color.DarkOrange;
+            this.addBillbtn.Location = new System.Drawing.Point(396, 535);
+            this.addBillbtn.Name = "addBillbtn";
+            this.addBillbtn.Size = new System.Drawing.Size(77, 36);
+            this.addBillbtn.TabIndex = 18;
+            this.addBillbtn.Text = "ADD";
+            this.addBillbtn.UseVisualStyleBackColor = false;
+            this.addBillbtn.Click += new System.EventHandler(this.addBillbtn_Click);
             // 
-            // button1
+            // refressProductsbtn
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.DarkOrange;
-            this.button1.Location = new System.Drawing.Point(186, 210);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(113, 24);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "Refresh";
-            this.button1.UseVisualStyleBackColor = false;
+            this.refressProductsbtn.BackColor = System.Drawing.Color.White;
+            this.refressProductsbtn.FlatAppearance.BorderSize = 0;
+            this.refressProductsbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.refressProductsbtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.refressProductsbtn.ForeColor = System.Drawing.Color.DarkOrange;
+            this.refressProductsbtn.Location = new System.Drawing.Point(186, 210);
+            this.refressProductsbtn.Name = "refressProductsbtn";
+            this.refressProductsbtn.Size = new System.Drawing.Size(113, 24);
+            this.refressProductsbtn.TabIndex = 17;
+            this.refressProductsbtn.Text = "Refresh";
+            this.refressProductsbtn.UseVisualStyleBackColor = false;
+            this.refressProductsbtn.Click += new System.EventHandler(this.refressProductsbtn_Click);
             // 
             // prodDVG1
             // 
@@ -392,10 +410,10 @@
             this.comboBox1.TabIndex = 14;
             this.comboBox1.Text = "SELECT CATEGORY";
             // 
-            // ProdDGV
+            // billDGV
             // 
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.ProdDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.billDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -403,9 +421,9 @@
             dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ProdDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.ProdDGV.ColumnHeadersHeight = 26;
-            this.ProdDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.billDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.billDGV.ColumnHeadersHeight = 26;
+            this.billDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -413,34 +431,35 @@
             dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ProdDGV.DefaultCellStyle = dataGridViewCellStyle9;
-            this.ProdDGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.ProdDGV.Location = new System.Drawing.Point(357, 360);
-            this.ProdDGV.Name = "ProdDGV";
-            this.ProdDGV.RowHeadersVisible = false;
-            this.ProdDGV.Size = new System.Drawing.Size(511, 169);
-            this.ProdDGV.TabIndex = 13;
-            this.ProdDGV.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.ProdDGV.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.ProdDGV.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.ProdDGV.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.ProdDGV.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.ProdDGV.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.ProdDGV.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.ProdDGV.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.ProdDGV.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.ProdDGV.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProdDGV.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.ProdDGV.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.ProdDGV.ThemeStyle.HeaderStyle.Height = 26;
-            this.ProdDGV.ThemeStyle.ReadOnly = false;
-            this.ProdDGV.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.ProdDGV.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.ProdDGV.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProdDGV.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.ProdDGV.ThemeStyle.RowsStyle.Height = 22;
-            this.ProdDGV.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.ProdDGV.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.billDGV.DefaultCellStyle = dataGridViewCellStyle9;
+            this.billDGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.billDGV.Location = new System.Drawing.Point(357, 360);
+            this.billDGV.Name = "billDGV";
+            this.billDGV.RowHeadersVisible = false;
+            this.billDGV.Size = new System.Drawing.Size(511, 169);
+            this.billDGV.TabIndex = 13;
+            this.billDGV.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.billDGV.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.billDGV.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.billDGV.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.billDGV.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.billDGV.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.billDGV.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.billDGV.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.billDGV.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.billDGV.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.billDGV.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.billDGV.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.billDGV.ThemeStyle.HeaderStyle.Height = 26;
+            this.billDGV.ThemeStyle.ReadOnly = false;
+            this.billDGV.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.billDGV.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.billDGV.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.billDGV.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.billDGV.ThemeStyle.RowsStyle.Height = 22;
+            this.billDGV.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.billDGV.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.billDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.billDGV_CellContentClick);
             // 
             // categorycombo
             // 
@@ -450,6 +469,7 @@
             this.categorycombo.Size = new System.Drawing.Size(159, 29);
             this.categorycombo.TabIndex = 10;
             this.categorycombo.Text = "SELECT CATEGORY";
+            this.categorycombo.SelectionChangeCommitted += new System.EventHandler(this.categorycombo_SelectionChangeCommitted);
             // 
             // quantitytxt
             // 
@@ -507,12 +527,12 @@
             this.namelbl.TabIndex = 3;
             this.namelbl.Text = "ProdName";
             // 
-            // prodidtxt
+            // billidtxt
             // 
-            this.prodidtxt.Location = new System.Drawing.Point(95, 40);
-            this.prodidtxt.Name = "prodidtxt";
-            this.prodidtxt.Size = new System.Drawing.Size(204, 27);
-            this.prodidtxt.TabIndex = 2;
+            this.billidtxt.Location = new System.Drawing.Point(95, 40);
+            this.billidtxt.Name = "billidtxt";
+            this.billidtxt.Size = new System.Drawing.Size(204, 27);
+            this.billidtxt.TabIndex = 2;
             // 
             // idlbl
             // 
@@ -550,6 +570,21 @@
             this.x_exitbtn.UseVisualStyleBackColor = true;
             this.x_exitbtn.Click += new System.EventHandler(this.x_exitbtn_Click);
             // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
             // SellingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -568,7 +603,7 @@
             this.manageProductspnl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.orderDVG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.prodDVG1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ProdDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.billDGV)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -578,7 +613,7 @@
         private System.Windows.Forms.Panel manageProductspnl;
         private System.Windows.Forms.Button refreshbtn;
         private System.Windows.Forms.ComboBox comboBox1;
-        private Guna.UI2.WinForms.Guna2DataGridView ProdDGV;
+        private Guna.UI2.WinForms.Guna2DataGridView billDGV;
         private System.Windows.Forms.ComboBox categorycombo;
         private System.Windows.Forms.TextBox quantitytxt;
         private System.Windows.Forms.Label pricelbl;
@@ -586,19 +621,19 @@
         private System.Windows.Forms.Label quantitylbl;
         private System.Windows.Forms.TextBox nametxt;
         private System.Windows.Forms.Label namelbl;
-        private System.Windows.Forms.TextBox prodidtxt;
+        private System.Windows.Forms.TextBox billidtxt;
         private System.Windows.Forms.Label idlbl;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button refressProductsbtn;
         private Guna.UI2.WinForms.Guna2DataGridView prodDVG1;
         private System.Windows.Forms.Button deletebtn;
         private System.Windows.Forms.Button printbtn;
-        private System.Windows.Forms.Button addbtn;
+        private System.Windows.Forms.Button addBillbtn;
         private System.Windows.Forms.Button x_exitbtn;
         private System.Windows.Forms.Label datelbl;
         private System.Windows.Forms.Label sellerlbl;
         private System.Windows.Forms.Button addProductbtn;
-        private System.Windows.Forms.Label billamountlbl;
+        private System.Windows.Forms.Label billamountlbl1;
         private System.Windows.Forms.Label amountlbl;
         private System.Windows.Forms.Label saleslistlbl;
         private Guna.UI2.WinForms.Guna2DataGridView orderDVG;
@@ -607,5 +642,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn price;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantiy;
         private System.Windows.Forms.DataGridViewTextBoxColumn total;
+        private System.Windows.Forms.Label billamountlbl;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
     }
 }
