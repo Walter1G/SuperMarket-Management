@@ -34,6 +34,7 @@ namespace SuperMarket
             prodDVG1.DataSource = ds.Tables[0];
             con.Close();
         }
+        int flag = 0;
 
         private void populateBills()
         {
@@ -50,12 +51,14 @@ namespace SuperMarket
         {
             populate();
             populateBills();
+            fillcombo();
         }
 
         private void prodDVG1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             nametxt.Text = prodDVG1.SelectedRows[0].Cells[0].Value.ToString();
             pricetxt.Text = prodDVG1.SelectedRows[0].Cells[1].Value.ToString();
+            flag = 1;
         }
 
         private void x_exitbtn_Click(object sender, EventArgs e)
@@ -127,7 +130,7 @@ namespace SuperMarket
             }
         }
 
-        int flag = 0;
+      
         private void printbtn_Click(object sender, EventArgs e)
         {
             if(printPreviewDialog1.ShowDialog() == DialogResult.OK)
@@ -160,13 +163,37 @@ namespace SuperMarket
         private void categorycombo_SelectionChangeCommitted(object sender, EventArgs e)
         {
             con.Open();
-            string query = "select ProdName,ProdQty from ProductTbl where ProdCat='"+categorycombo.SelectedItem.ToString()+"'";
+            string query = "select ProdName,ProdQty from ProductTbl where ProdCat='"+categorycombo.SelectedValue.ToString()+"'";
             SqlDataAdapter sda = new SqlDataAdapter(query, con);
             SqlCommandBuilder cmd = new SqlCommandBuilder(sda);
             var ds = new DataSet();
             sda.Fill(ds);
             prodDVG1.DataSource = ds.Tables[0];
             con.Close();
+
+        }
+        private void fillcombo()
+        {
+            //bind the combo with the database
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select CatName from Categorytbl", con);
+            SqlDataReader sdr;
+            sdr = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("CatName", typeof(string));
+            dt.Load(sdr);
+            categorycombo.ValueMember = "catName";
+            categorycombo.DataSource = dt;
+
+            con.Close();
+
+        }
+
+        private void logoutbtn_Click(object sender, EventArgs e)
+        {
+            loginfrm login = new loginfrm();
+            login.Show();
+            Hide();
 
         }
     }

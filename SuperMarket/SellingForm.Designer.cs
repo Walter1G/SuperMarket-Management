@@ -73,6 +73,7 @@
             this.x_exitbtn = new System.Windows.Forms.Button();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.logoutbtn = new System.Windows.Forms.Label();
             this.manageProductspnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.orderDVG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prodDVG1)).BeginInit();
@@ -108,9 +109,9 @@
             this.manageProductspnl.Controls.Add(this.billidtxt);
             this.manageProductspnl.Controls.Add(this.idlbl);
             this.manageProductspnl.Controls.Add(this.label1);
-            this.manageProductspnl.Location = new System.Drawing.Point(57, 28);
+            this.manageProductspnl.Location = new System.Drawing.Point(70, 27);
             this.manageProductspnl.Name = "manageProductspnl";
-            this.manageProductspnl.Size = new System.Drawing.Size(905, 601);
+            this.manageProductspnl.Size = new System.Drawing.Size(905, 578);
             this.manageProductspnl.TabIndex = 1;
             this.manageProductspnl.Paint += new System.Windows.Forms.PaintEventHandler(this.manageProductspnl_Paint);
             // 
@@ -585,11 +586,24 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
+            // logoutbtn
+            // 
+            this.logoutbtn.AutoSize = true;
+            this.logoutbtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutbtn.ForeColor = System.Drawing.Color.DarkOrange;
+            this.logoutbtn.Location = new System.Drawing.Point(2, 579);
+            this.logoutbtn.Name = "logoutbtn";
+            this.logoutbtn.Size = new System.Drawing.Size(62, 19);
+            this.logoutbtn.TabIndex = 23;
+            this.logoutbtn.Text = "log out";
+            this.logoutbtn.Click += new System.EventHandler(this.logoutbtn_Click);
+            // 
             // SellingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(994, 611);
+            this.Controls.Add(this.logoutbtn);
             this.Controls.Add(this.x_exitbtn);
             this.Controls.Add(this.manageProductspnl);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -605,6 +619,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.prodDVG1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.billDGV)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -645,5 +660,6 @@
         private System.Windows.Forms.Label billamountlbl;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Windows.Forms.Label logoutbtn;
     }
 }
