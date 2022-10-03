@@ -109,7 +109,7 @@
             this.manageProductspnl.Controls.Add(this.billidtxt);
             this.manageProductspnl.Controls.Add(this.idlbl);
             this.manageProductspnl.Controls.Add(this.label1);
-            this.manageProductspnl.Location = new System.Drawing.Point(70, 27);
+            this.manageProductspnl.Location = new System.Drawing.Point(71, 28);
             this.manageProductspnl.Name = "manageProductspnl";
             this.manageProductspnl.Size = new System.Drawing.Size(905, 578);
             this.manageProductspnl.TabIndex = 1;
@@ -563,7 +563,7 @@
             this.x_exitbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.x_exitbtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.x_exitbtn.ForeColor = System.Drawing.Color.DarkOrange;
-            this.x_exitbtn.Location = new System.Drawing.Point(956, 1);
+            this.x_exitbtn.Location = new System.Drawing.Point(950, -3);
             this.x_exitbtn.Name = "x_exitbtn";
             this.x_exitbtn.Size = new System.Drawing.Size(35, 27);
             this.x_exitbtn.TabIndex = 5;

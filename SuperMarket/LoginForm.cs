@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace SuperMarket
 {
@@ -16,7 +17,7 @@ namespace SuperMarket
         {
             InitializeComponent();
         }
-
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Wally\source\repos\SuperMarket\SuperMarket\smarketdb.mdf;Integrated Security=True;Connect Timeout=30");
         private void label5_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -53,7 +54,27 @@ namespace SuperMarket
                     }
                     else
                     {
-                        MessageBox.Show("You are in the Seller Section");
+                        //MessageBox.Show("You are in the Seller Section");
+                        con.Open();
+                        string query = "select count(8) from sellerTbl where SellerName='" + userNametxt.Text + "' and SellerPass='" + passwordtxt.Text + "'";
+                        SqlDataAdapter sda = new SqlDataAdapter(query, con);
+                        DataTable dt = new DataTable();
+                        sda.Fill(dt);
+
+                        if (dt.Rows[0][0].ToString() == "1")
+                        {
+                            SellingForm sell = new SellingForm();   
+                            sell.Show();
+                            Hide();
+                            con.Close();
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Username and Password do not match");
+                        }
+                        con.Close();
+
                     }
                 }
                 else

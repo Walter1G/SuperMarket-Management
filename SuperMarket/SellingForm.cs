@@ -34,7 +34,7 @@ namespace SuperMarket
             prodDVG1.DataSource = ds.Tables[0];
             con.Close();
         }
-        int flag = 0;
+       
 
         private void populateBills()
         {
@@ -58,7 +58,7 @@ namespace SuperMarket
         {
             nametxt.Text = prodDVG1.SelectedRows[0].Cells[0].Value.ToString();
             pricetxt.Text = prodDVG1.SelectedRows[0].Cells[1].Value.ToString();
-            flag = 1;
+            
         }
 
         private void x_exitbtn_Click(object sender, EventArgs e)
@@ -141,7 +141,7 @@ namespace SuperMarket
 
         private void billDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            flag = 1;
+            
         }
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
