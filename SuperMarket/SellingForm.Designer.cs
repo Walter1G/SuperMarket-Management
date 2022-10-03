@@ -109,9 +109,9 @@
             this.manageProductspnl.Controls.Add(this.billidtxt);
             this.manageProductspnl.Controls.Add(this.idlbl);
             this.manageProductspnl.Controls.Add(this.label1);
-            this.manageProductspnl.Location = new System.Drawing.Point(71, 28);
+            this.manageProductspnl.Location = new System.Drawing.Point(92, 28);
             this.manageProductspnl.Name = "manageProductspnl";
-            this.manageProductspnl.Size = new System.Drawing.Size(905, 578);
+            this.manageProductspnl.Size = new System.Drawing.Size(884, 578);
             this.manageProductspnl.TabIndex = 1;
             this.manageProductspnl.Paint += new System.Windows.Forms.PaintEventHandler(this.manageProductspnl_Paint);
             // 
@@ -248,7 +248,7 @@
             this.addProductbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addProductbtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addProductbtn.ForeColor = System.Drawing.Color.DarkOrange;
-            this.addProductbtn.Location = new System.Drawing.Point(141, 168);
+            this.addProductbtn.Location = new System.Drawing.Point(167, 168);
             this.addProductbtn.Name = "addProductbtn";
             this.addProductbtn.Size = new System.Drawing.Size(158, 36);
             this.addProductbtn.TabIndex = 23;
@@ -261,7 +261,7 @@
             this.sellerlbl.AutoSize = true;
             this.sellerlbl.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sellerlbl.ForeColor = System.Drawing.Color.White;
-            this.sellerlbl.Location = new System.Drawing.Point(3, 11);
+            this.sellerlbl.Location = new System.Drawing.Point(33, 13);
             this.sellerlbl.Name = "sellerlbl";
             this.sellerlbl.Size = new System.Drawing.Size(56, 19);
             this.sellerlbl.TabIndex = 22;
@@ -329,7 +329,7 @@
             this.refressProductsbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.refressProductsbtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.refressProductsbtn.ForeColor = System.Drawing.Color.DarkOrange;
-            this.refressProductsbtn.Location = new System.Drawing.Point(186, 210);
+            this.refressProductsbtn.Location = new System.Drawing.Point(212, 210);
             this.refressProductsbtn.Name = "refressProductsbtn";
             this.refressProductsbtn.Size = new System.Drawing.Size(113, 24);
             this.refressProductsbtn.TabIndex = 17;
@@ -360,7 +360,7 @@
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.prodDVG1.DefaultCellStyle = dataGridViewCellStyle6;
             this.prodDVG1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.prodDVG1.Location = new System.Drawing.Point(3, 244);
+            this.prodDVG1.Location = new System.Drawing.Point(25, 244);
             this.prodDVG1.Name = "prodDVG1";
             this.prodDVG1.RowHeadersVisible = false;
             this.prodDVG1.Size = new System.Drawing.Size(303, 327);
@@ -465,7 +465,7 @@
             // categorycombo
             // 
             this.categorycombo.FormattingEnabled = true;
-            this.categorycombo.Location = new System.Drawing.Point(7, 209);
+            this.categorycombo.Location = new System.Drawing.Point(33, 209);
             this.categorycombo.Name = "categorycombo";
             this.categorycombo.Size = new System.Drawing.Size(159, 29);
             this.categorycombo.TabIndex = 10;
@@ -474,7 +474,7 @@
             // 
             // quantitytxt
             // 
-            this.quantitytxt.Location = new System.Drawing.Point(95, 136);
+            this.quantitytxt.Location = new System.Drawing.Point(121, 136);
             this.quantitytxt.Name = "quantitytxt";
             this.quantitytxt.Size = new System.Drawing.Size(204, 27);
             this.quantitytxt.TabIndex = 8;
@@ -484,7 +484,7 @@
             this.pricelbl.AutoSize = true;
             this.pricelbl.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pricelbl.ForeColor = System.Drawing.Color.White;
-            this.pricelbl.Location = new System.Drawing.Point(17, 136);
+            this.pricelbl.Location = new System.Drawing.Point(43, 136);
             this.pricelbl.Name = "pricelbl";
             this.pricelbl.Size = new System.Drawing.Size(74, 19);
             this.pricelbl.TabIndex = 7;
@@ -492,7 +492,7 @@
             // 
             // pricetxt
             // 
-            this.pricetxt.Location = new System.Drawing.Point(95, 103);
+            this.pricetxt.Location = new System.Drawing.Point(121, 103);
             this.pricetxt.Name = "pricetxt";
             this.pricetxt.ReadOnly = true;
             this.pricetxt.Size = new System.Drawing.Size(204, 27);
@@ -503,7 +503,7 @@
             this.quantitylbl.AutoSize = true;
             this.quantitylbl.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.quantitylbl.ForeColor = System.Drawing.Color.White;
-            this.quantitylbl.Location = new System.Drawing.Point(42, 103);
+            this.quantitylbl.Location = new System.Drawing.Point(68, 103);
             this.quantitylbl.Name = "quantitylbl";
             this.quantitylbl.Size = new System.Drawing.Size(47, 19);
             this.quantitylbl.TabIndex = 5;
@@ -511,7 +511,7 @@
             // 
             // nametxt
             // 
-            this.nametxt.Location = new System.Drawing.Point(95, 71);
+            this.nametxt.Location = new System.Drawing.Point(121, 71);
             this.nametxt.Name = "nametxt";
             this.nametxt.ReadOnly = true;
             this.nametxt.Size = new System.Drawing.Size(204, 27);
@@ -522,7 +522,7 @@
             this.namelbl.AutoSize = true;
             this.namelbl.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.namelbl.ForeColor = System.Drawing.Color.White;
-            this.namelbl.Location = new System.Drawing.Point(-2, 71);
+            this.namelbl.Location = new System.Drawing.Point(24, 71);
             this.namelbl.Name = "namelbl";
             this.namelbl.Size = new System.Drawing.Size(93, 19);
             this.namelbl.TabIndex = 3;
@@ -530,7 +530,7 @@
             // 
             // billidtxt
             // 
-            this.billidtxt.Location = new System.Drawing.Point(95, 40);
+            this.billidtxt.Location = new System.Drawing.Point(121, 40);
             this.billidtxt.Name = "billidtxt";
             this.billidtxt.Size = new System.Drawing.Size(204, 27);
             this.billidtxt.TabIndex = 2;
@@ -540,7 +540,7 @@
             this.idlbl.AutoSize = true;
             this.idlbl.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.idlbl.ForeColor = System.Drawing.Color.White;
-            this.idlbl.Location = new System.Drawing.Point(17, 43);
+            this.idlbl.Location = new System.Drawing.Point(43, 43);
             this.idlbl.Name = "idlbl";
             this.idlbl.Size = new System.Drawing.Size(55, 19);
             this.idlbl.TabIndex = 1;

@@ -17,6 +17,7 @@ namespace SuperMarket
         {
             InitializeComponent();
         }
+        public static string SellerName = "";
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Wally\source\repos\SuperMarket\SuperMarket\smarketdb.mdf;Integrated Security=True;Connect Timeout=30");
         private void label5_Click(object sender, EventArgs e)
         {
@@ -63,6 +64,7 @@ namespace SuperMarket
 
                         if (dt.Rows[0][0].ToString() == "1")
                         {
+                            SellerName = userNametxt.Text;
                             SellingForm sell = new SellingForm();   
                             sell.Show();
                             Hide();

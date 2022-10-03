@@ -52,6 +52,7 @@ namespace SuperMarket
             populate();
             populateBills();
             fillcombo();
+            sellerlbl.Text = loginfrm.SellerName;
         }
 
         private void prodDVG1_CellContentClick(object sender, DataGridViewCellEventArgs e)
