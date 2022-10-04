@@ -47,6 +47,7 @@
             this.productsbtn = new System.Windows.Forms.Button();
             this.sellerbtn = new System.Windows.Forms.Button();
             this.x_exitbtn = new System.Windows.Forms.Button();
+            this.logoutbtn = new System.Windows.Forms.Label();
             this.manageCategoriespnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CatDGV)).BeginInit();
             this.SuspendLayout();
@@ -286,11 +287,24 @@
             this.x_exitbtn.UseVisualStyleBackColor = true;
             this.x_exitbtn.Click += new System.EventHandler(this.x_exitbtn_Click);
             // 
+            // logoutbtn
+            // 
+            this.logoutbtn.AutoSize = true;
+            this.logoutbtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutbtn.ForeColor = System.Drawing.Color.DarkOrange;
+            this.logoutbtn.Location = new System.Drawing.Point(43, 515);
+            this.logoutbtn.Name = "logoutbtn";
+            this.logoutbtn.Size = new System.Drawing.Size(62, 19);
+            this.logoutbtn.TabIndex = 25;
+            this.logoutbtn.Text = "log out";
+            this.logoutbtn.Click += new System.EventHandler(this.logoutbtn_Click);
+            // 
             // CategoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(994, 611);
+            this.Controls.Add(this.logoutbtn);
             this.Controls.Add(this.x_exitbtn);
             this.Controls.Add(this.sellingbtn);
             this.Controls.Add(this.manageCategoriespnl);
@@ -305,6 +319,7 @@
             this.manageCategoriespnl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CatDGV)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -326,5 +341,6 @@
         private System.Windows.Forms.Button productsbtn;
         private System.Windows.Forms.Button sellerbtn;
         private System.Windows.Forms.Button x_exitbtn;
+        private System.Windows.Forms.Label logoutbtn;
     }
 }

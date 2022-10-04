@@ -150,5 +150,13 @@ namespace SuperMarket
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void logoutbtn_Click(object sender, EventArgs e)
+        {
+            loginfrm login = new loginfrm();
+            login.Show();
+            Hide();
+
+        }
     }
 }

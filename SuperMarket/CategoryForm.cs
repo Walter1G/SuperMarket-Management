@@ -135,5 +135,12 @@ namespace SuperMarket
             seller.Show();
             Hide();
         }
+
+        private void logoutbtn_Click(object sender, EventArgs e)
+        {
+            loginfrm login = new loginfrm();
+            login.Show();
+            Hide();
+        }
     }
 }
